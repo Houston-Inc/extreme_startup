@@ -6,7 +6,7 @@
     %a{ :href => '/players' }
       I want to play!
     %h1 Leaderboard 
-    %ul
+    %ol
       - leaderboard.each do |entry|
         %li.player
           %div{:class => ["ranking", "name"]} #{html_escape(entry.playername)}

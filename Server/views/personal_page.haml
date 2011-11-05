@@ -17,3 +17,6 @@
           %div{:class => ["logline", "result", logline.result]} result: #{logline.result}
           %div{:class => ["logline", "points", logline.result]} points awarded: #{logline.points}
           
+    :javascript
+      	refresh = function() { window.location.reload(); };
+      	setTimeout(refresh, 5000);

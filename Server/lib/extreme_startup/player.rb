@@ -39,7 +39,7 @@ module ExtremeStartup
     end
 
     def to_s
-      "#{name} (#{@uuid}: #{url})"
+	"<a href='#{url}'><strong>#{name}</strong></a> (<a href='/players/#{@uuid}'>#{@uuid}</a>)"
     end
   
    def answers_for_question(question_class, result)

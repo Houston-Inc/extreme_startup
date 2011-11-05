@@ -1,0 +1,19 @@
+%html
+  %head
+    %title Extreme Startup - Leaderboard
+    %link(rel="stylesheet" href="/css/style.css")
+  %body
+    %a{ :href => '/players' }
+      I want to play!
+    %h1 Leaderboard 
+    %ul
+      - leaderboard.each do |entry|
+        %li.player
+          %div{:class => ["ranking", "name"]} #{html_escape(entry.playername)}
+          %div{:class => ["ranking", "points"]} #{entry.score}
+          %div{:class => ["ranking", "correct_answers"]} #{entry.correct_answers}
+          
+    :javascript
+      refresh = function() { window.location.reload(); };
+      setTimeout(refresh, 10000);
+
